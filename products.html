@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- START: header -->
+  
+  <div class="probootstrap-loader"></div>
+  <img class="" width=150px src="img/image9.png" alt="Grimoire Aeroworks">
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="index.html" class="probootstrap-logo"><span></span></a>
+        
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class=""><a href="products.html">Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Philosophy.html">Philosophy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <ul class="probootstrap-right-nav hidden-xs">
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/grimoire_aerowerks/"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          <div class="extra-text visible-xs"> 
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Address</h5>
+            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+            <h5>Connect</h5>
+            <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <!-- END: header -->
+   <section>
+    <h2>Products</h2>
+
+    <title>Image Gallery</title>
+    <style> 
+      /* Gallery styles */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        max-width: 800px;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+  
+      /* Lightbox (modal) styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+      }
+      .lightbox:target {
+        display: flex;
+      }
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    </style>
+
+  
+  <div class="gallery">
+    <img src="img/image2.jpg" alt="Image 1" onclick="openLightbox(this.src)">
+    <img src="img/image3.jpg" alt="Image 2" onclick="openLightbox(this.src)">
+    <img src="img/image5.jpg" alt="Image 3" onclick="openLightbox(this.src)">
+    <img src="img/image10.jpg" alt="Image 4" onclick="openLightbox(this.src)">
+    <img src="img/image11.jpg" alt="Image 5" onclick="openLightbox(this.src)">
+    <img src="img/image12.jpg" alt="Image 6" onclick="openLightbox(this.src)">
+  </div>
+  
+  <!-- Lightbox (modal) -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+   </section>
+  <section class=" flexslider">
+    
+    <style>
+        .probootstrap-section h3.heading,
+        .probootstrap-section h2 {
+          text-align: center;
+          font-size: 1.5em;
+        }
+      
+        /* Basic Grid */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+      
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      
+        .col-md-3 {
+          flex: 1;
+          max-width: 25%;
+          padding: 10px;
+          box-sizing: border-box;
+        }
+      
+        .col-md-12 {
+          flex: 1;
+          max-width: 100%;
+          padding: 10px;
+        }
+      
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+          .col-md-3 {
+            max-width: 100%;
+          }
+      
+          .probootstrap-section h2,
+          .probootstrap-section h3 {
+            font-size: 1.2em;
+            text-align: center;
+          }
+      
+          .icon {
+            font-size: 1.5em;
+          }
+        }
+      
+        /* Styling for icons and text */
+        .icon {
+          font-size: 2em;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      
+        .text {
+          text-align: center;
+        }
+      </style>
+      
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <!-- Introduction Section -->
+            <div class="col-md-12">
+              <div class="service left-icon probootstrap-animate">
+                <div class="text">
+                  <h3 class="heading">Our Journey</h3>
+                  <p>We started with the E36 platform. Then, a pro Formula Drift race car driver approached us to make C6 Corvette parts. These are the products we've developed with precision and expertise.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- E36 Products Section -->
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="heading">E36 Products</h3>
+            </div>
+      
+            <!-- E36 Exterior -->
+            <div class="col-md-3">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon">
+                  <i class="icon-car"></i>
+                </div>
+                <div class="text">
+                  <h4 class="heading">Exterior</h4>
+                  <ul>
+                    <li>2-Door Coupe Hood</li>
+                    <li>4-Door Sedan Hood</li>
+                    <li>Front Canards</li>
+                    <li>E36 OEM Style Lip</li>
+                    <li>M3 Diffuser</li>
+                    <li>M3 Twisted Side Skirts</li>
+                    <li>Fog Light Deletes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <!-- E36 Engine Bay -->
+            <div class="col-md-3">
+              <div class="service left-icon probootstrap-animate">
+             
+                <div class="text">
+                  <h4 class="heading">Engine Bay</h4>
+                  <ul>
+                    <li>US Spec Radiator Cover</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <!-- E36 Interior -->
+            <div class="col-md-3">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon">
+                  <i class="icon-dashboard"></i>
+                </div>
+                <div class="text">
+                  <h4 class="heading">Interior</h4>
+                  <ul>
+                    <li>LTW Style Glovebox Dash Trim</li>
+                    <li>Center Console (Shift Knob)</li>
+                    <li>Center Console (Handbrake)</li>
+                    <li>Sunroof Control Panel</li>
+                    <li>Handbrake Lever</li>
+                    <li>Plain Door Card Panel</li>
+                    <li>Grimoire Aerowerks Weighted and LED Lit Shift Knob (5 or 6 Speed)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Corvette C6 Exterior -->
+            <div class="col-md-3">
+              <div class="service left-icon probootstrap-animate">
+                <div class="icon">
+                  <i class="icon-car"></i>
+                </div>
+                <div class="text">
+                  <h4 class="heading">Corvette C6 Products</h4>
+                  <ul>
+                    <li>Rear Z06 Fenders (Quarter Panels)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+              
+    
+              <h2 class="mb20">Do you have amazing project in mind? Let's get started.</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+              <p><a href="#" role="button" class="btn btn-primary">Get In Touch</a></p>
+          
+  </section>
+
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+
+  
+  <footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">About Black.</h4>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+            <p><a href="#">Read more...</a></p>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Quick Links</h4>
+            <ul class="stack-link">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Philosophys</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Testimonial</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">More Links</h4>
+            <ul class="stack-link">
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Support Help</a></li>
+            </ul>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Subscribe</h4>
+            <p>Far far away behind the word mountains far from.</p>
+            <form action="#">
+              <div class="form-field">
+                <input type="text" class="form-control" placeholder="Enter your email">
+                <button class="btn btn-subscribe">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2017 <a href="https://uicookies.com/">uiCookies:Black</a>. Designed by <a href="https://uicookies.com/">uicookies.com</a> <br> Demo Photos from <a href="https://unsplash.com/">Unsplash</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  
+
+  <script src="js/scripts.min.js"></script>
+  <script src="js/main.min.js"></script>
+  <script src="js/custom.js"></script>
+
+  </body>
+</html>
+  </body>
+</html>
