@@ -63,68 +63,190 @@
   <!-- END: header -->
   
                 <title>Grimoire Aerowerks Philosophy</title>
-  <style>
-    
-    h1 {
-      font-size: 2em;
-      color: #333;
-    }
-    p {
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .video, .images {
-      margin: 20px 0;
-    }
-    .video iframe, .images img {
+  <<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimoire Aerowerks</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #eedfdf;
+      }
+      h1, h2, h3 {
+        color: #bebbbb;
+        font-weight: bold;
+      }
+      p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .button-group {
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 20px;
+        margin: 10px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #555;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .gallery img {
       width: 100%;
+      height: 200px; /* Set a consistent height for all images */
+      object-fit: cover; /* Crop images to fill the set dimensions */
       border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
-    .images {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-    .button-group {
-      margin: 20px 0;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      margin: 10px;
-      background-color: #333;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 1em;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #555;
-    }
-  </style>
+      .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+      }
+      .lightbox:target {
+        display: flex;
+      }
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        .button-group {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
 
-<div class="container">
-  <h3>Grimoire Aerowerks' Philosophy</h3>
-  <div class="button-group">
-    <a href="products.html" class="button">Shop Products</a>
-    <a href="projects.html" class="button">Projects</a>
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555;
+}
+      }
+    </style>
+  </head>
+  <body>
+  
+  <div class="container">
+    <!-- Introduction Section -->
+    <h1>Grimoire Aerowerks' Philosophy</h1>
     <p>We’re not here to mess around. We craft automotive components that blend classic aesthetics with cutting-edge technology. Grimoire Aerowerks simply wants real carbon fiber to go on real applied cars. Whether it be for your track car, restomod, or show car, we respect the science and beauty of aerodynamics and its materials necessary to achieve this.</p>
-
-  <h2>We’re committed to:</h2>
   
-  <h3>Real</h3>
-  <p>No fiberglass. We utilize only genuine carbon fiber to deliver exceptional strength, weight reduction, and a stunning visual appeal. None of that fake carbon BS which everyone claims is carbon.</p>
+    <!-- Button Group -->
+    <div class="button-group">
+      <a href="products.html" class="button">Shop Products</a>
+      <a href="projects.html" class="button">Projects</a>
+    </div>
   
-  <h3>Precision</h3>
-  <p>Our skilled artisans meticulously craft each component, ensuring precise fitment and impeccable quality. We take our time. We take pride.</p>
+    <!-- Values Section -->
+    <h2>We’re Committed to:</h2>
   
-  <h3>Performance</h3>
-  <p>Our carbon fiber parts are engineered to enhance the performance of your vehicle, whether it’s on the track or the street. Weigh another component against ours - you’ll feel the difference.</p>
+    <!-- Gallery with Descriptions -->
+    <div class="gallery">
+      <div>
+        <h3>Real</h3>
+        <img width="100px"src="img/image81.png" alt="Image 1" onclick="openLightbox(this.src)">
+        <p>No fiberglass. We utilize only genuine carbon fiber to deliver exceptional strength, weight reduction, and a stunning visual appeal. None of that fake carbon BS which everyone claims is carbon.</p>
+      </div>
   
-  <p>Experience the lightness. Experience the strength. Explore our range of carbon fiber products and transform your classic car into a modern masterpiece.</p>
+      <div>
+        <h3>Precision</h3>
+        <img src="img/image18.png" alt="Image 2" onclick="openLightbox(this.src)">
+        <p>Our skilled artisans meticulously craft each component, ensuring precise fitment and impeccable quality. We take our time. We take pride.</p>
+      </div>
+  
+      <div>
+        <h3>Performance</h3>
+        <img src="img/image17.png" alt="Image 3" onclick="openLightbox(this.src)">
+        <p>Our carbon fiber parts are engineered to enhance the performance of your vehicle, whether it’s on the track or the street. Weigh another component against ours - you’ll feel the difference.</p>
+      </div>
+  
+      
+    </div>
   </div>
-</div>
+  <div>
+    
+    <h1>Experience the lightness. Experience the strength. Explore our range of carbon fiber products and transform your classic car into a modern masterpiece.</p>
+      <div class="button-group">
+        <a href="products.html" class="button">Shop Products</a>
+        <a href="projects.html" class="button">Projects</a>
+      </div>
+    </div>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+  
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+  
+  </body>
+  </html>
+  
+  </script>
             </div>
           </div>
         </div>
