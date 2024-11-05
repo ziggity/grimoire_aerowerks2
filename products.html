@@ -64,56 +64,7 @@
     <h2>Products</h2>
 
     <title>Image Gallery</title>
-    <style> 
-      /* Gallery styles */
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        max-width: 800px;
-      }
-      .gallery img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-      .gallery img:hover {
-        transform: scale(1.05);
-      }
-  
-      /* Lightbox (modal) styles */
-      .lightbox {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-      .lightbox img {
-        max-width: 90%;
-        max-height: 90%;
-        border-radius: 8px;
-      }
-      .lightbox:target {
-        display: flex;
-      }
-      .close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-      }
-    </style>
+   
 
   
   <div class="gallery">
@@ -144,66 +95,7 @@
    </section>
   <section class=" flexslider">
     
-    <style>
-        .probootstrap-section h3.heading,
-        .probootstrap-section h2 {
-          text-align: center;
-          font-size: 1.5em;
-        }
-      
-        /* Basic Grid */
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
-        }
-      
-        .row {
-          display: flex;
-          flex-wrap: wrap;
-        }
-      
-        .col-md-3 {
-          flex: 1;
-          max-width: 25%;
-          padding: 10px;
-          box-sizing: border-box;
-        }
-      
-        .col-md-12 {
-          flex: 1;
-          max-width: 100%;
-          padding: 10px;
-        }
-      
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-          .col-md-3 {
-            max-width: 100%;
-          }
-      
-          .probootstrap-section h2,
-          .probootstrap-section h3 {
-            font-size: 1.2em;
-            text-align: center;
-          }
-      
-          .icon {
-            font-size: 1.5em;
-          }
-        }
-      
-        /* Styling for icons and text */
-        .icon {
-          font-size: 2em;
-          text-align: center;
-          margin-bottom: 10px;
-        }
-      
-        .text {
-          text-align: center;
-        }
-      </style>
+  
       
       <section class="probootstrap-section">
         <div class="container">
@@ -376,7 +268,45 @@
       </div>
     </div>
   </footer>
-
+  <footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">About Grimoire Aerowerks.</h4>
+            <p>One stop shop for Carbon Fiber Molds and unique modifications </p>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <ul class="stack-link">
+                <li><a href="index.html">Home</a></li>
+                <li class=""><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Philosophy.html">Philosophy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div> 
+        </div>
+        
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2024 <a href="https://zachbeecherportfolio.netlify.app/">ZB designs</a></a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-social">
+              <li><a href="https://www.facebook.com/profile.php?id=100069989679495"><i class="icon-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/grimoire_aerowerks/"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
   </div>
